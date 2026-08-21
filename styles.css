@@ -286,6 +286,18 @@ td b { color: var(--teal); font-family: "Roboto Mono", monospace; }
 .career-group:last-child { grid-column: 1 / -1; }
 .career-internship { margin: 20px 0 0; padding: 16px 20px; border-radius: 16px; color: var(--teal-deep); background: var(--mint-soft); font-weight: 600; }
 
+.notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.note-card { display: grid; min-height: 285px; align-content: start; padding: 30px; border: 1px solid rgba(0,108,103,.18); border-radius: 24px; background: white; box-shadow: 0 16px 42px rgba(15,65,62,.07); }
+.note-card-accent { color: white; border-color: var(--teal); background: linear-gradient(145deg, var(--teal-deep), var(--teal)); }
+.note-label { color: var(--teal); font: 600 11px/1 "Roboto Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
+.note-card-accent .note-label { color: var(--mint); }
+.note-card h3 { margin: 18px 0 12px; font-size: 24px; line-height: 1.35; }
+.note-card p { margin: 0; color: var(--muted); font-size: 14px; }
+.note-card-accent p { color: rgba(255,255,255,.72); }
+.note-card a { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-top: 24px; color: var(--teal); font-weight: 700; text-decoration: none; }
+.note-card a:hover { text-decoration: underline; }
+.note-card-accent a { color: var(--mint); }
+
 footer { border-top: 1px solid var(--line); background: white; }
 footer .shell { display: flex; justify-content: space-between; gap: 24px; padding: 28px 0; color: var(--muted); font-size: 12px; }
 footer p { margin: 0; }
@@ -302,6 +314,7 @@ footer a { color: var(--teal); text-decoration: none; }
   .stipend-grid { grid-template-columns: 1fr 1fr; }
   .career-overview { grid-template-columns: 1fr; }
   .career-lead { min-height: 240px; }
+  .notes-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 680px) {
